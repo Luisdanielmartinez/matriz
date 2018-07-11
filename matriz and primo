@@ -1,0 +1,48 @@
+"""Leer una matriz 5x3 entera y determinar en qué fila está el mayor número primo. """
+#aqui importa la libreria numpy#
+import numpy as np
+import numpy
+#aqui desclaro la matriz usando un un metodo de la libreria#
+matriz=np.zeros((5,3))
+#aqui es para guardar los datos primos de la matriz#
+matriz2=np.zeros((5,3))
+n=0
+print("ingrese 15 numeros")
+#aqui es para ingresar los datos ala primera matriz#
+for y in range(5):
+    for k in range(3):
+        n+=1
+        num=int(input("ingrese " +str(n)+" numero"))
+        print("____________________________________")
+        matriz[y,k]=num
+#aqui para verificar los datos primos#
+verificar = 0
+fil=5
+col=3
+#aqui para sacar los datos primos de la matriz y engrasar lo a la otra matriz#
+for i in range(fil):
+   for j in range(col):
+       verificar = matriz[i][j]
+       if verificar%2!= 0:
+           matriz2[i][j] = verificar
+#aqui es sacando los maximos de cada fila y hacer codiciones#
+fila1=np.amax(matriz2[0])
+fila2=np.amax(matriz2[1])
+fila3=np.amax(matriz2[2])
+fila4=np.amax(matriz2[3])
+fila5=np.amax(matriz2[4])
+if   fila1>fila2 and fila1>fila3 and fila1>fila4 and fila1>fila5:
+    print("__________________________________________________")
+    print("el mayor de los primos esta en la primera fila")
+if  fila2>fila1 and fila2>fila3 and fila2>fila4 and fila2>fila5:
+    print("_______________________________________________")
+    print("esta en la segunda fila")
+if  fila3>fila1 and fila3 >fila2 and fila3>fila4 and fila3>fila5:
+    print("_____________________________________________________")
+    print("esta en la tercera fila")
+if  fila4>fila1 and fila4>fila2 and fila4> fila3 and fila4>fila5:
+    print("_____________________________________________________")
+    print("esta en la cuarta fila")
+if  fila5>fila1 and fila5>fila2 and fila5>fila3 and fila5>fila4:
+    print("_____________________________________________________")
+    print("esta en la quinta fila:")
