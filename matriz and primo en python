@@ -1,4 +1,5 @@
 """Leer una matriz 5x3 entera y determinar en qué fila está el mayor número primo. """
+en python 3.6
 #aqui importa la libreria numpy#
 import numpy as np
 import numpy
